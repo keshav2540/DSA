@@ -1,0 +1,66 @@
+#include <bits/stdc++.h>
+using namespace std;
+int helper(int idx,int target,vector<int>&arr){
+    if(idx==0){//think what happend when target is 0,we not write this case hows it work
+      if(target%arr[0]==0){
+        return 1;
+      } return 0;
+       }
+    int not_take=helper(idx-1,target,arr);
+    int take=0;
+    if(target>=arr[idx]) take=helper(idx,target-arr[idx],arr);
+    return take+not_take;
+}
+int helper2(int idx,int target,vector<int>&arr,vector<vector<int>>&dp){//memorizzation use in overlapping 
+    if(idx==0){
+        if(target%arr[0]==0){
+        return 1;
+      } return 0;
+    }
+    if(dp[idx][target]!=0) return dp[idx][target];
+    int not_take=0+helper2(idx-1,target,arr,dp);
+    int take=0;
+    if(target>=arr[idx]) take=helper2(idx,target-arr[idx],arr,dp);
+    return dp[idx][target]=take+not_take;
+}
+int helper3(int idx,int target,vector<int>&arr,vector<vector<int>>&dp){
+    for(int i=0;i<=target;i++){
+        dp[0][i]=(i%arr[0]==0);
+    }
+    for(int i=1;i<=idx;i++){
+        for(int k=0;k<=target;k++){
+    int not_take=dp[i-1][k];
+    int take=0;
+    if(k>=arr[i]) take=dp[i][k-arr[i]];
+     dp[i][k]=take+not_take;
+        }
+    }return dp[idx][target];
+}
+int helperspaceoptimize(int idx,int target,vector<int>&arr,vector<vector<int>>&dp){
+    vector<int>prev(target+1,0),curr(target+1,0);
+    for(int i=0;i<=target;i++){
+        prev[i]=(i%arr[0]==0);
+    }
+    for(int i=1;i<=idx;i++){
+        for(int k=0;k<=target;k++){
+    int not_take=0+prev[k];
+    int take=0;
+    if(k>=arr[i]) take=curr[k-arr[i]];
+     curr[k]=take+not_take;
+        }prev=curr;
+    }return prev[target];
+}
+int waytomakecoinchange(int target,vector<int>&arr){
+    int idx=arr.size();
+    vector<vector<int>>dp(idx,vector<int>(target+1,0));
+    return helperspaceoptimize(idx-1,target,arr,dp);
+}
+int main() {
+vector<int>arr={1,2,3};
+cout<<waytomakecoinchange(7,arr)<<endl;
+cout<<waytomakecoinchange(3,arr)<<endl;
+cout<<waytomakecoinchange(4,arr)<<endl;
+cout<<waytomakecoinchange(9,arr)<<endl;
+cout<<waytomakecoinchange(2,arr)<<endl;
+    return 0;
+}

@@ -1,0 +1,21 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "vector": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp",
+    "new": "cpp",
+    "bitset": "cpp",
+    "forward_list": "cpp",
+    "functional": "cpp",
+    "fstream": "cpp",
+    "istream": "cpp",
+    "streambuf": "cpp",
+    "chrono": "cpp",
+    "algorithm": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "enabled",
+  "zenMode.restore": true
+}

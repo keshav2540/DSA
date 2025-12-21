@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+vector<int>mindistance(int v,vector<vector<int>>adj[],int src){
+    priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
+    vector<int>dist(v,1e9);
+   dist[src]=0;
+   pq.push({0,src});
+   while(!pq.empty()){
+    int node=pq.top().second;
+    int nodedist=pq.top().first;
+    pq.pop();
+    for(auto i:adj[node]){
+        int adjnode=i[0];
+        int adjdis=i[1];
+           if(adjdis+nodedist<dist[adjnode]){
+            dist[adjnode]=adjdis+nodedist;
+            pq.push({dist[adjnode],adjnode});
+           }  }
+   }
+ return dist;
+}
+int main() {
+vector<vector<int>>adj[6];
+adj[0]={{1,4},{2,4}};
+adj[1]={{0,4},{2,2}};
+adj[2]={{0,4},{1,2},{3,3},{4,1},{5,6}};
+adj[3]={{2,3},{5,2}};
+adj[4]={{2,1},{5,3}};
+adj[5]={{2,6},{3,2},{4,3}};
+
+for(auto i:mindistance(6,adj,0)){cout<<i<<" ";}
+
+    return 0;
+}
