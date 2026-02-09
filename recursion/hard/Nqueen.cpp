@@ -38,7 +38,7 @@ void placequeen(int col,int n,vector<string>&board,vector<vector<string>>&ans){
 }
 
 int main() {
-    int n=4;
+    int n=8;
     vector<string>board(n);
     vector<vector<string>>ans;
     string s(n,'.');

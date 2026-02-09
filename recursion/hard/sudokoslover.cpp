@@ -22,7 +22,7 @@ bool solve(vector<vector<char>>&board){
                 }  return false;
             }
            
-        }
+        }   
 
     } return true;
 }
