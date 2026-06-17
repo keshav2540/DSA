@@ -149,7 +149,7 @@ g++ -o output filename.cpp
 | Striver's SDE Sheet | [takeuforward.org](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/) |
 | Striver's A2Z DSA | [takeuforward.org/strivers-a2z-dsa-course](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) |
 | YouTube Playlist | [Striver's YouTube](https://www.youtube.com/@takeUforward) |
-| LeetCode Profile | [leetcode.com/keshav2540](https://leetcode.com/keshav2540) |
+| LeetCode Profile | [leetcode.com/keshav2540](https://leetcode.com/u/Keshva/) |
 
 ---
 
