@@ -2,7 +2,10 @@
 
 A complete Data Structures & Algorithms journey following the **Striver's DSA Sheet (SDE Sheet)**, solved in **C++**. This repository contains well-structured solutions with clean code and comments.
 
----
+---## 📸 Screenshots
+
+### Complete Striver DSA Sheet
+![sheet Image](https://github.com/user-attachments/assets/06ae85f4-cb66-481b-8442-27b8117fc443)
 
 ## 👨‍💻 About
 
