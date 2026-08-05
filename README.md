@@ -17,25 +17,6 @@ This repo documents my complete DSA preparation using Striver's A2Z / SDE Sheet 
 
 ## 📊 Progress Tracker
 
-| Topic | Total Questions | Solved | Status |
-|---|---|---|---|
-| Arrays | 40 | 40 | ✅ Done |
-| Linked List | 31 | 31 | ✅ Done |
-| Greedy Algorithms | 16 | 16 | ✅ Done |
-| Recursion & Backtracking | 20 | 20 | ✅ Done |
-| Binary Search | 32 | 32 | ✅ Done |
-| Heaps | 16 | 16 | ✅ Done |
-| Stack & Queue | 30 | 30 | ✅ Done |
-| Strings | 15 | 15 | ✅ Done |
-| Binary Tree | 39 | 39 | ✅ Done |
-| Binary Search Tree | 17 | 17 | ✅ Done |
-| Graph | 54 | 54 | ✅ Done |
-| Dynamic Programming | 56 | 56 | ✅ Done |
-| Tries | 7 | 7 | ✅ Done |
-| **Total** | **~373** | **~373** | 🎯 **Completed** |
-
----
-
 ## 📁 Folder Structure
 
 ```
